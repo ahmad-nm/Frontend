@@ -1,0 +1,163 @@
+body{
+    font-family: "Outfit";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: hsl(30, 54%, 90%);
+}
+ul{
+    padding: 0;
+}
+.container{
+    padding: 30px;
+    border-radius: 20px;
+    background-color: white;
+    width: 640px;
+}
+.titles{
+    color: hsl(24, 5%, 18%);
+    font-weight: 900;
+    font-size: 16px;
+}
+.text{
+    color: hsl(30, 10%, 34%);
+    font-size: 16px;
+    font-weight: 600;
+}
+.image{
+    height: 300px;
+    border-radius: 10px;
+    width: 640px;
+}
+.header{
+    font-family: "Young Serif";
+    color: hsl(14, 45%, 36%);
+    font-weight: 800;
+}
+.description{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.description p{
+    color: hsl(30, 10%, 34%);
+}
+.preparation{
+    background-color: hsl(330, 100%, 98%);
+    padding-left: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
+}    
+.preparation h3{
+    color: hsl(332, 51%, 32%);
+    font-weight: 800;
+    padding-left: 20px;
+    margin: 0;
+}
+.preparation ul{
+    margin-bottom: 0;
+}
+.preparation li {
+    position: relative;
+    padding: 5px;
+    list-style: none;
+    padding-left: 30px;
+    margin-left: 30px; 
+}
+.preparation li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: hsl(332, 51%, 32%);
+    font-size: 20px; 
+}
+.ingredients{
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+.ingredients ul{
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+.ingredients li {
+    position: relative;
+    padding: 5px;
+    list-style: none;
+    padding-left: 30px;
+}
+.ingredients li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: hsl(14, 45%, 36%);
+    font-size: 20px;
+}
+.instructions ol {
+    counter-reset: list-counter;
+    padding-left: 5px;
+}
+.instructions ol li {
+    position: relative;
+    padding: 5px;
+    list-style: none;
+    padding-left: 30px;
+    counter-increment: list-counter;
+    line-height: 1.8;
+}
+.instructions ol li::before {
+    content: counter(list-counter) '.';
+    position: absolute;
+    left: 0;
+    color: hsl(14, 45%, 36%);
+    font-size: 15px;
+    font-weight: bold;
+}
+.instructions{
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+    padding-bottom: 10px;
+}
+.Amount{
+    color: hsl(14, 45%, 36%);
+    font-weight: 800;
+}
+.nutrition table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.nutrition td {
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+    padding: 15px;
+    text-align: left;
+    padding-left: 40px;
+}
+.nutrition tr:last-child td {
+    border-bottom: none;
+}
+
+@media (max-width: 375px) {
+    .container {
+        width: 100%; 
+    }
+
+    .image{
+        height: auto;
+        width: 100%; 
+    }
+
+    .nutrition table {
+        width: 100%;
+    }
+
+    .nutrition th, .nutrition td {
+        padding: 10px;
+        font-size: 14px; 
+    }
+
+    .instructions ol li {
+        padding-left: 20px; 
+    }
+    
+    .instructions ol li::before {
+        left: 5px;
+        font-size: 14px; 
+    }
+}
