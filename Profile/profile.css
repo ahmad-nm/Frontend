@@ -1,0 +1,79 @@
+* {
+    font-family: "inter", sans-serif;
+}
+body{
+    background-color: hsl(0, 0%, 8%);
+    display: flex;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    border-radius: 20px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 12%);
+    padding: 20px;
+}
+.portrait img{
+    border-radius: 50%;
+    height: 100px;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.head h2{
+    margin: 0;
+    padding-top: 10px;
+}
+.head p{
+    font-size: 14px;
+}
+#p1{
+    color: hsl(75, 94%, 57%);
+    font-weight: 600;
+}
+#p2{
+    font-weight: 400;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.buttons button{
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: hsl(0, 0%, 20%);
+    font-size: 14px;
+    padding: 15px;
+    cursor: pointer;
+    width: 100% ;
+    font-weight: 700;
+}
+.buttons button:hover{
+    background-color: hsl(75, 94%, 57%);
+    color: hsl(0, 0%, 12%);
+}
+@media screen and (max-width: 375px){
+    .container{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 376px){
+    .container{
+        width: 350px;
+    }
+}
